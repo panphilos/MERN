@@ -13,7 +13,7 @@ dotenv.config(); //dotenv, escaneja l'arrel d'arxius buscant l'arxiu .env
 conectarDB();
 
 //Havent instalat i importat CORS, donem acces a la url del servidor des don es fan les peticions de frontend. Totes les peticions que no vinguin d'aquí, no estaran permeses
-const doniminiosPermitidos = '*';
+const doniminiosPermitidos = [process.env.FRONTEND_URL];
 const corsOptions = {
     origin: function(origin, callback) {
         if(doniminiosPermitidos.indexOf(origin) !== -1){
