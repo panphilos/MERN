@@ -21,7 +21,7 @@ const emailRegistro = async ( datos ) => {
 
       //En el link, no hi fiquem la url de la api, hi hem de ficar la URL del frontend.
     const info = await transporter.sendMail({
-        from: "APV - Administrador de pacientes de veterinario",
+        from: '"APV - Administrador Pacientes Veterinaria" <apv@correo.com>',
         to: email,
         subject: 'Comprueba tu cuenta en APV',
         text: 'Comprueba tu cuenta en APV',
